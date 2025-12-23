@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My list</title>
+</head>
+<body>
+
+
+      <!-- My list Movie Section -->
+<div class="row" >
+    <h1>Movies</h1>
+    <div class="row_posters">
+        <img src="Images/MylistMovies1.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies2.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies3.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies4.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies5.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies6.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies7.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies8.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies9.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/MylistMovies10.jpg" alt="" class="row__poster row__posterLarge">
+    </div>
+</div>
+
+<!--My list Series Section-->
+<div class="row" >
+    <h1>Series</h1>
+    <div class="row_posters">
+        <img src="Images/Series1.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series2.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series3.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series4.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series5.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series6.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series7.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series8.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series9.jpg" alt="" class="row__poster row__posterLarge">
+        <img src="Images/Series10.jpg" alt="" class="row__poster row__posterLarge">
+    </div>
+</div>
+
+
+<style>
+     *{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+
+}
+    .row__poster{
+    width: 150%;
+    object-fit: contain;
+    max-height: 300px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.row__poster:hover{
+    transform: scale(1.08);
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row__posterLarge{
+    max-height: 300px;
+}
+
+.row__posterLarge:hover{
+    transform: scale(1.08);
+}
+
+.row{
+    color: white;
+    margin-left: 20px;
+}
+
+
+</style>
+    
+</body>
+</html>

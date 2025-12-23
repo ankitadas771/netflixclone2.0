@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Who's Watching?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profiles-body">
+
+<div class="profiles-container">
+    <h1>Who's watching?</h1>
+
+    <div class="profiles-list">
+
+        <div class="profile-card" onclick="selectProfile('Owner')">
+            <img src="images/Netflix-avatar1.png" alt="Owner">
+            <p>Owner</p>
+        </div>
+
+        <div class="profile-card" onclick="selectProfile('Kids')">
+            <img src="images/Netflix-avatar2.png" alt="Kids">
+            <p>Kids</p>
+        </div>
+
+        <div class="profile-card" onclick="selectProfile('Guest')">
+            <img src="images/Netflix-avatar3.png" alt="Guest">
+            <p>Guest</p>
+        </div>
+
+        <div class="profile-card add-profile">
+            <div class="add-icon">+</div>
+            <p>Add Profile</p>
+        </div>
+
+    </div>
+
+    <button class="manage-btn">Manage Profiles</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+/* Who's Watching Page */
+.profiles-body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profiles-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profiles-container h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.profiles-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-card {
+    text-align: center;
+    cursor: pointer;
+}
+
+.profile-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.profile-card:hover img {
+    border-color: white;
+}
+
+.profile-card p {
+    margin-top: 10px;
+    color: gray;
+    font-size: 18px;
+}
+
+.profile-card:hover p {
+    color: white;
+}
+
+.add-profile .add-icon {
+    width: 140px;
+    height: 140px;
+    border: 3px solid gray;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.add-profile:hover .add-icon {
+    border-color: white;
+    color: white;
+}
+
+.manage-btn {
+    margin-top: 50px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 1px solid gray;
+    color: gray;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.manage-btn:hover {
+    border-color: white;
+    color: white;
+}
+</style>
+<script>
+function selectProfile(profileName) {
+    localStorage.setItem("selectedProfile", profileName);
+    window.location.href = "home.html";
+}
+</script>
